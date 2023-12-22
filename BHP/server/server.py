@@ -15,11 +15,11 @@ def predict_house_price():
     total_sqft = float(request.form['total_sqft'])
     location = request.form['location']
     bhk = int(request.form['bhk'])
-    balacony = int(request.form['balacony'])
+    balcony = int(request.form['balcony'])
     bath = int(request.form['bath'])
 
     response = jsonify({
-        'estimated_price': util.get_estimated_price(location, total_sqft, bhk, balacony, bath)
+        'estimated_price': util.get_estimated_price(location, total_sqft, bhk, balcony, bath)
     })
 
     response.headers.add('access-control-allow-origin', '*')
